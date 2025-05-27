@@ -30,7 +30,7 @@
     <section class="donate">
         <h2>Make a Donation</h2>
         <p>Your generosity helps us provide education, health, and safety to children in need.</p>
-        <form action="php/donate.php" method="POST">
+        <form action="php/donate.php" method="POST" >
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -39,13 +39,12 @@
 
             <label for="amount">Donation Amount:</label>
             <input type="number" id="amount" name="amount" required>
-            <button type="submit">Donate Now</button>
+            <button type="submit" id="submit">Donate Now</button>
             
-            <p>To proceed with payments, Please click the button below</p>
-
-            <a href="donate.html" class="donation">Donate Now</a>
+            
         </form>
     </section>
+    <script src="js/donate.js">  </script>
 <footer>
     <div class="footer-container">
      

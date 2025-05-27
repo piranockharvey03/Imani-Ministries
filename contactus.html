@@ -39,7 +39,7 @@
     <section id="contact">
         <div class="form-container">
             <h2>Contact Us</h2>
-            <form action="php/contactus.php" method="POST">
+            <form action="php/contactus.php" method="POST" id="contactusform">
                 <div class="form-group">
                     <label for="name">Full Name:</label>
                     <input type="text" id="name" name="name" required placeholder="Enter your full name">
@@ -66,12 +66,13 @@
                 </div><br>
                 
                 <div class="form-group">
-                    <button id="js1" type="submit">Submit</button>
+                    <button id="js1" type="submit" onclick="sent">Send</button>
                     </div>
             </form>
            
         </div>
     </section>
+    <script src="js/contactus.js">  </script>
 
     <footer>
         <div class="footer-container">
