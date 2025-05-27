@@ -39,35 +39,37 @@
     <section id="contact">
         <div class="form-container">
             <h2>Contact Us</h2>
-            <div class="form-group">
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" required placeholder="Enter your full name">
-            </div>
-    
-            <div class="form-group">
-                <label for="email">Contacts/Phone Number:</label>
-                <input type="email" id="email" name="email" required placeholder="Enter your Phone Number">
-            </div>
-    
-            <div class="form-group">
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required placeholder="Enter your email address">
-            </div>
-    
-            <div class="form-group">
-                <label for="location">Location:</label>
-                <input type="text" id="location" name="location" required placeholder="Enter your location">
-            </div>
-    
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required placeholder="Your message here..."> </textarea>
-            </div><br>
-    
-            <div  class="form-group">
-                <button  id="js1" type="submit">Submit</button>
-            </div>
+            <form action="php/contactus.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="number">Contacts/Phone Number:</label>
+                    <input type="number" id="number" name="number" required placeholder="Enter your Phone Number">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" required placeholder="Enter your location">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required placeholder="Your message here..."> </textarea>
+                </div><br>
+                
+                <div class="form-group">
+                    <button id="js1" type="submit">Submit</button>
+                    </div>
             </form>
+           
         </div>
     </section>
 
