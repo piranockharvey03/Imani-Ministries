@@ -177,6 +177,7 @@ body {
 .what-we-do h2 {
     color: #000000;
     margin-bottom: 1rem;
+    margin-right: 20%;
 }
 
 .what-we-do p {
@@ -209,7 +210,7 @@ body {
     color: #ffd334;
 }
 .gallery1 {
-    margin-left: 50%;
+    margin-left: 45%;
     margin-bottom:100px;
 }
 
