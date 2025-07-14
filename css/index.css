@@ -119,6 +119,10 @@ body {
     transition: background-color 0.3s ease;
     cursor: pointer;
 }
+.def2{
+   margin-left: 20%;
+   flex-wrap: wrap;
+}
 
 .body2 .donate:hover,
 .body2 .donate:focus {
