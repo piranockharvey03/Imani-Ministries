@@ -120,8 +120,8 @@ body {
     cursor: pointer;
 }
 .def2{
-   margin-left: 20%;
-   flex-wrap: wrap;
+    justify-self: center;
+    
 }
 
 .body2 .donate:hover,
