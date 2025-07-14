@@ -1,104 +1,231 @@
-/* What We Do Page Styles */
-body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+/* ============================
+   GLOBAL RESET & VARIABLES
+============================ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: 0;
-    height: 100vh;
-    width: 100%;
-    animation: fadeIn 2s ease-in-out;
 }
 
+:root {
+    --primary-color: #243F60;
+    --accent-color: #ffd334;
+    --text-light: #ffffff;
+    --text-dark: #000000;
+    --font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* ============================
+   BASE STYLES
+============================ */
+body {
+    font-family: var(--font-family);
+    height: 100vh;
+    width: 100%;
+    background-color: #f8f8f8;
+    animation: fadeIn 2s ease-in-out;
+    box-sizing: border-box;
+}
+
+/* ============================
+   HEADER
+============================ */
 .header {
-    background: #243F60;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--text-light);
     padding: 1rem;
     text-align: center;
     animation: fadeIn 2s ease-in-out;
-   
-}
-.container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: -20px;
-    margin-right: 10%;
-}
-
-.navContainer {
-    margin-top: 120px;
-    margin-bottom: 20px;
-    font-size: 65px;
-    margin-left: 50px;
-    animation: slideInUp 1.5s ease-out;
 }
 
 .header h1 {
-    margin-top: -120px;
-    margin-bottom: 70px;
-    font-size: 65px;
-    margin-left: 50px;
+    font-size: 4rem;
+    margin: -120px 0 70px 50px;
     animation: slideInUp 1.5s ease-out;
 }
 
 .header ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     justify-content: center;
     gap: 1rem;
-    /*margin-right: -50px;*/
-}
-.header ul li {
-    margin: -25px;
     margin-top: -50px;
-    font-size: 20px;
-    margin-left: 50px;
 }
 
 .header ul li a {
-    color: #ffffff;
+    color: var(--text-light);
     text-decoration: none;
+    font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
 .header ul li a:hover {
-    color: #ffd334;
+    color: var(--accent-color);
+}
+
+/* ============================
+   NAV & ICON
+============================ */
+.navContainer {
+    font-size: 4rem;
+    margin: 120px 0 20px 50px;
+    animation: slideInUp 1.5s ease-out;
 }
 
 .mainicon1 {
-    border-radius: 150px;
     width: 150px;
     height: 150px;
-    /* margin-right: 1000px;
-    margin-bottom: -40px;*/
+    border-radius: 50%;
     margin-top: -10px;
     animation: bounce 2s infinite;
 }
+
+/* ============================
+   DONATE BUTTON
+============================ */
 .body2 .donate {
-    background: #ffd334;
-    color: #fff;
+    background: var(--accent-color);
+    color: var(--text-light);
     padding: 0.5rem 1rem;
-    text-decoration: none;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 1.2rem;
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
 .body2 .donate:hover {
-    background-color: #243F60;
+    background-color: var(--primary-color);
 }
 
+/* ============================
+   WHAT WE DO SECTION
+============================ */
 .what-we-do {
-    padding: 2rem;
+    max-width: 900px;
+    margin: -20px auto 40px auto;
+    padding: 2rem 1rem;
     text-align: center;
-    margin: 20px;
-    margin-left: 200px;
-    margin-top: -20px;
 }
 
-/* Animations */
+.what-we-do h2 {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    margin-right: 20%;
+}
+
+.what-we-do p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+/* ============================
+   PROGRAMS SECTION
+============================ */
+.program1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 60px;
+    margin-top: -80px;
+}
+
+.program {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 20px;
+    width: 400px;
+    text-align: center;
+    color: var(--accent-color);
+}
+
+.program h3 {
+    margin-bottom: 0.5rem;
+}
+
+.program p {
+    margin: 0;
+}
+
+/* ============================
+   GALLERY
+============================ */
+.gallery1 {
+    max-width: 800px;
+    margin: 0 auto 100px auto;
+}
+
+/* ============================
+   FOOTER
+============================ */
+.footer {
+    padding: 40px 0;
+    font-family: var(--font-family);
+}
+
+.footer-container {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1rem;
+    margin: -20px 0 -30px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.footer-section {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.footer-section ul li:hover {
+    text-decoration: underline;
+}
+
+.social-icons i {
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.footer-links span {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.footer-links span:hover {
+    text-decoration: underline;
+}
+
+/* ============================
+   ANIMATIONS
+============================ */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -176,108 +303,46 @@ body {
     }
 }
 
-.what-we-do h2 {
-    color: #000000;
-    margin-bottom: 1rem;
-    margin-right: 20%;
-}
+/* ============================
+   RESPONSIVE DESIGN
+============================ */
+@media (max-width: 768px) {
 
-.what-we-do p {
-    margin-bottom: 40px;
-    font-size: 1.1rem;
-}
-.program1{
-    display: flex;
-    margin-bottom: 60px;
-    margin-top: -80px;
-}
-.program {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 1rem;
-    margin: 20px;
-    width: 400px;
-    text-align: center;
-    background-color: #243F60;
-   
-}
+    .header h1,
+    .navContainer {
+        font-size: 2.5rem;
+        margin-left: 20px;
+    }
 
-.program h3 {
-    color: #ffd334;
-    margin-bottom: 0.5rem;
-}
+    .header ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 0;
+    }
 
-.program p {
-    margin: 0;
-    color: #ffd334;
-}
-.gallery1 {
-    margin-left: 45%;
-    margin-bottom:100px;
-}
+    .program1 {
+        flex-direction: column;
+        margin-top: 0;
+    }
 
-.footer {
-    padding: 40px 0;
-    font-family: 'Trebuchet MS';
-}
+    .program {
+        width: 90%;
+        margin: 10px auto;
+    }
 
-.footer-container {
-    background: #243F60;
-    color: #ffffff;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 50px;
-    animation: fadeIn 2s ease-in-out;
-}
+    .what-we-do {
+        max-width: 95%;
+        margin: 0 auto 40px auto;
+        padding: 1rem;
+    }
 
-.footer-container {
-    margin-top: -20px;
-    margin-bottom: -30px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
+    .gallery1 {
+        max-width: 95%;
+        margin: 0 auto 50px auto;
+    }
 
-.footer-section {
-    width: 200px;
-}
-
-.footer-section h4 {
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-
-.footer-section ul li:hover {
-    text-decoration: underline;
-}
-
-.social-icons i {
-    margin-right: 10px;
-    font-size: 25px;
-}
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid #ccc;
-}
-
-.footer-links span {
-    margin: 0 10px;
-    cursor: pointer;
-}
-
-.footer-links span:hover {
-    text-decoration: underline;
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
 }

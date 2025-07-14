@@ -1,110 +1,132 @@
-/* Work With Us Page Styles */
-body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+/* ============================
+   GLOBAL RESET & VARIABLES
+============================ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+}
+
+:root {
+    --primary-color: #243F60;
+    --accent-color: #ffd334;
+    --text-light: #ffffff;
+    --text-dark: #000000;
+    --font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* ============================
+   BASE STYLES
+============================ */
+body {
+    font-family: var(--font-family);
     height: 100vh;
     width: 100%;
     animation: fadeIn 2s ease-in-out;
+    background-color: #f8f8f8;
+    box-sizing: border-box;
 }
 
+/* ============================
+   HEADER
+============================ */
 .header {
-    background: #243F60;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--text-light);
     padding: 1rem;
     text-align: center;
     animation: fadeIn 2s ease-in-out;
-    
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: -20px;
-    margin-right: 10%;
-}
-
-.navContainer {
-    margin-top: 120px;
-    margin-bottom: 20px;
-    font-size: 65px;
-    margin-left: 50px;
-    animation: slideInUp 1.5s ease-out;
 }
 
 .header h1 {
-    margin-top: -120px;
-    margin-bottom: 70px;
-    font-size: 65px;
-    margin-left: 50px;
+    font-size: 4rem;
+    margin: -120px 0 70px 50px;
     animation: slideInUp 1.5s ease-out;
 }
+
 .header ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     justify-content: center;
     gap: 1rem;
-    /*margin-right: -50px;*/
+    margin-top: -50px;
 }
 
 .header ul li {
-    margin: -25px;
-    margin-top: -50px;
-    font-size: 20px;
+    font-size: 1.2rem;
     margin-left: 50px;
 }
 
 .header ul li a {
-    color: #ffffff;
+    color: var(--text-light);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .header ul li a:hover {
-    color: #ffd334;
+    color: var(--accent-color);
+}
+
+/* ============================
+   NAV & ICON
+============================ */
+.navContainer {
+    font-size: 4rem;
+    margin: 120px 0 20px 50px;
+    animation: slideInUp 1.5s ease-out;
 }
 
 .mainicon1 {
-    border-radius: 150px;
     width: 150px;
     height: 150px;
-    /* margin-right: 1000px;
-    margin-bottom: -40px;*/
+    border-radius: 50%;
     margin-top: -10px;
     animation: bounce 2s infinite;
 }
+
+/* ============================
+   DONATE BUTTON
+============================ */
 .body2 .donate {
-    background: #ffd334;
-    color: #fff;
+    background: var(--accent-color);
+    color: var(--text-light);
     padding: 0.5rem 1rem;
-    text-decoration: none;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 1.2rem;
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
 .body2 .donate:hover {
-    background-color: #243F60;
+    background-color: var(--primary-color);
 }
+
+/* ============================
+   WORK WITH US SECTION
+============================ */
 .work-with-us {
-    padding: 2rem;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
 }
 
 .work-with-us h2 {
-    color: #000000;
+    color: var(--text-dark);
     margin-bottom: 1rem;
 }
 
 .work-with-us p {
     margin-bottom: 2rem;
     font-size: 1.1rem;
+    color: var(--text-dark);
 }
 
+/* ============================
+   OPPORTUNITIES
+============================ */
 .opportunity {
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -112,35 +134,118 @@ body {
     margin: 1rem auto;
     max-width: 600px;
     text-align: left;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 .opportunity h3 {
-    color: #000000;
+    color: var(--text-dark);
     margin-bottom: 0.5rem;
 }
 
 .opportunity p {
     margin: 0.5rem 0;
+    color: var(--text-dark);
 }
 
+/* ============================
+   APPLY BUTTON
+============================ */
 .apply-btn {
     display: inline-block;
     margin-top: 1rem;
     padding: 10px 20px;
     background-color: #000000;
-    color: white;
+    color: var(--text-light);
     text-decoration: none;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .apply-btn:hover {
-    background-color: #000000;
+    background-color: #333333;
 }
 
+/* ============================
+   CONTACT SECTION
+============================ */
 .contact {
     margin-top: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+    color: var(--text-dark);
 }
-/* Animations */
+
+/* ============================
+   FOOTER
+============================ */
+.footer {
+    padding: 40px 0;
+    font-family: var(--font-family);
+}
+
+.footer-container {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1rem;
+    margin: -20px 0 -30px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.footer-section {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.footer-section ul li:hover {
+    text-decoration: underline;
+}
+
+.social-icons i {
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.footer-links span {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.footer-links span:hover {
+    text-decoration: underline;
+}
+
+/* ============================
+   ANIMATIONS
+============================ */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -218,68 +323,42 @@ body {
     }
 }
 
-.footer {
-    padding: 40px 0;
-    font-family: 'Trebuchet MS';
-}
+/* ============================
+   RESPONSIVE DESIGN
+============================ */
+@media (max-width: 768px) {
 
-.footer-container {
-    background: #243F60;
-    color: #ffffff;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 50px;
-    animation: fadeIn 2s ease-in-out;
-}
+    .header h1,
+    .navContainer {
+        font-size: 2.5rem;
+        margin-left: 20px;
+    }
 
-.footer-container {
-    margin-top: -20px;
-    margin-bottom: -30px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
+    .header ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 0;
+    }
 
-.footer-section {
-    width: 200px;
-}
+    .opportunity {
+        max-width: 90%;
+        margin: 1rem auto;
+    }
 
-.footer-section h4 {
-    margin-bottom: 15px;
-    font-weight: bold;
-}
+    .work-with-us {
+        padding: 1rem;
+        max-width: 95%;
+        margin: 0 auto 40px auto;
+    }
 
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
+    .contact {
+        max-width: 95%;
+        margin: 2rem auto 0 auto;
+        padding: 0 1rem;
+    }
 
-.footer-section ul li {
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-
-.footer-section ul li:hover {
-    text-decoration: underline;
-}
-
-.social-icons i {
-    margin-right: 10px;
-    font-size: 25px;
-}
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid #ccc;
-}
-
-.footer-links span {
-    margin: 0 10px;
-    cursor: pointer;
-}
-
-.footer-links span:hover {
-    text-decoration: underline;
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
 }

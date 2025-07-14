@@ -1,114 +1,244 @@
-/* Events Page Styles */
-body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+/* ============================
+   GLOBAL RESETS & VARIABLES
+============================ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+}
+
+:root {
+    --primary-color: #243f60;
+    --accent-color: #ffd334;
+    --text-light: #ffffff;
+    --text-dark: #000000;
+    --font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* ============================
+   BASE STYLES
+============================ */
+body {
+    font-family: var(--font-family);
     height: 100vh;
     width: 100%;
+    background-color: #f8f8f8;
     animation: fadeIn 2s ease-in-out;
-
 }
+
+/* ============================
+   HEADER
+============================ */
 .header {
-    background: #243F60;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--text-light);
     padding: 1rem;
     text-align: center;
     animation: fadeIn 2s ease-in-out;
-   
-}
-.container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: -20px;
-    margin-right: 10%;
-}
-
-.navContainer {
-    margin-top: 120px;
-    margin-bottom: 20px;
-    font-size: 65px;
-    margin-left: 50px;
-    animation: slideInUp 1.5s ease-out;
-
 }
 
 .header h1 {
-    margin-top: -120px;
-    margin-bottom: 70px;
-    font-size: 65px;
-    margin-left: 50px;
+    font-size: 4rem;
+    margin: -120px 0 70px 50px;
     animation: slideInUp 1.5s ease-out;
 }
 
 .header ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     justify-content: center;
     gap: 1rem;
-    /*margin-right: -50px;*/
-}
-
-.header ul li {
-    margin: -25px;
     margin-top: -50px;
-    font-size: 20px;
-    margin-left: 50px;
 }
 
 .header ul li a {
-    color: #ffffff;
+    color: var(--text-light);
     text-decoration: none;
+    font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
 .header ul li a:hover {
-    color: #ffd334;
+    color: var(--accent-color);
+}
+
+/* ============================
+   NAV & ICON
+============================ */
+.navContainer {
+    font-size: 4rem;
+    margin: 120px 0 20px 50px;
+    animation: slideInUp 1.5s ease-out;
 }
 
 .mainicon1 {
-    border-radius: 150px;
     width: 150px;
     height: 150px;
-    /* margin-right: 1000px;
-    margin-bottom: -40px;*/
+    border-radius: 50%;
     margin-top: -10px;
     animation: bounce 2s infinite;
 }
 
+/* ============================
+   DONATE BUTTON
+============================ */
 .body2 .donate {
-    background: #ffd334;
-    color: #fff;
+    background: var(--accent-color);
+    color: var(--text-light);
     padding: 0.5rem 1rem;
-    text-decoration: none;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 1.2rem;
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
 .body2 .donate:hover {
-    background-color: #243F60;
+    background-color: var(--primary-color);
 }
-.one{
+
+/* ============================
+   INTRO TEXT
+============================ */
+.one {
     text-align: center;
     margin-left: 12%;
 }
-.one p{
-    font-size: 20px;
+
+.one p {
+    font-size: 1.25rem;
 }
+
+/* ============================
+   EVENTS SECTION
+============================ */
 .events {
+    display: flex;
     padding: 2rem;
     text-align: center;
-    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .events h2 {
+    width: 100%;
     margin-bottom: 1rem;
 }
-/* Animations */
+
+.events p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.event {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    padding: 1rem;
+    margin: 1rem;
+    width: 600px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.event h3 {
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.event p {
+    margin: 0.5rem 0;
+}
+
+/* ============================
+   RSVP BUTTON
+============================ */
+.rsvp-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.rsvp-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--text-dark);
+}
+
+/* ============================
+   FOOTER
+============================ */
+.footer {
+    padding: 40px 0;
+    font-family: var(--font-family);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1rem;
+    animation: fadeIn 2s ease-in-out;
+    margin-top: -20px;
+    margin-bottom: -30px;
+}
+
+.footer-section {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.footer-section ul li:hover {
+    text-decoration: underline;
+}
+
+.social-icons i {
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.footer-links span {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.footer-links span:hover {
+    text-decoration: underline;
+}
+
+/* ============================
+   ANIMATIONS
+============================ */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -186,106 +316,33 @@ body {
     }
 }
 
-.events p {
-    margin-bottom: 2rem;
-    font-size: 1.1rem;
-}
+/* ============================
+   RESPONSIVE DESIGN
+============================ */
+@media (max-width: 768px) {
 
-.event {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 1rem;
-    margin: 20px;
-    width: 600px;
-    text-align: left;
-    border-radius: 50px;
-}
+    .header h1,
+    .navContainer {
+        font-size: 2.5rem;
+        margin-left: 20px;
+    }
 
-.event h3 {
-    color: #000000;
-    margin-bottom: 0.5rem;
-}
+    .header ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-.event p {
-    margin: 0.5rem 0;
-}
+    .mainicon1 {
+        width: 100px;
+        height: 100px;
+    }
 
-.rsvp-btn {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 10px 20px;
-    background-color: #243F60;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
+    .event {
+        width: 90%;
+    }
 
-.rsvp-btn:hover {
-    background-color: #ffd334;
-}
-
-.footer {
-    padding: 40px 0;
-    font-family: 'Trebuchet MS';
-}
-
-.footer-container {
-    background: #243F60;
-    color: #ffffff;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 50px;
-    animation: fadeIn 2s ease-in-out;
-}
-
-.footer-container {
-    margin-top: -20px;
-    margin-bottom: -30px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.footer-section {
-    width: 200px;
-}
-
-.footer-section h4 {
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-
-.footer-section ul li:hover {
-    text-decoration: underline;
-}
-
-.social-icons i {
-    margin-right: 10px;
-    font-size: 25px;
-}
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid #ccc;
-}
-
-.footer-links span {
-    margin: 0 10px;
-    cursor: pointer;
-}
-
-.footer-links span:hover {
-    text-decoration: underline;
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
 }
