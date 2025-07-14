@@ -323,42 +323,37 @@ body {
     }
 }
 
-/* ============================
-   RESPONSIVE DESIGN
-============================ */
+/* ========================================
+   RESPONSIVE MEDIA QUERIES
+======================================== */
 @media (max-width: 768px) {
-
-    .header h1,
-    .navContainer {
+    .header h1 {
         font-size: 2.5rem;
+    }
+
+    .navContainer {
+        font-size: 2rem;
         margin-left: 20px;
     }
 
     .header ul {
         flex-direction: column;
-        gap: 10px;
-        margin-top: 0;
+        gap: 0.5rem;
     }
 
-    .opportunity {
-        max-width: 90%;
-        margin: 1rem auto;
+    .mainicon1 {
+        width: 100px;
+        height: 100px;
     }
 
-    .work-with-us {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .story {
         padding: 1rem;
-        max-width: 95%;
-        margin: 0 auto 40px auto;
-    }
-
-    .contact {
-        max-width: 95%;
-        margin: 2rem auto 0 auto;
-        padding: 0 1rem;
-    }
-
-    .footer-section {
-        width: 100%;
-        text-align: center;
+        margin: 1rem;
+        width: 90%;
     }
 }
