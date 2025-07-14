@@ -42,7 +42,7 @@ body {
 
 .header h1 {
     font-size: 4rem;
-    margin: -120px 0 70px 50px;
+    margin: -120px 0 25px 50px;
     animation: slideInUp 1.5s ease-out;
 }
 

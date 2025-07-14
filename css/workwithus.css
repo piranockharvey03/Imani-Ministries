@@ -50,13 +50,14 @@ body {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    margin: -15px;
     margin-top: -50px;
 }
 
 .header ul li {
     font-size: 1.2rem;
     margin-left: 50px;
+    
 }
 
 .header ul li a {
