@@ -51,7 +51,7 @@ body {
     display: flex;
     justify-content: center;
     margin: -15px;
-    margin-top: -50px;
+    margin-top: -40px;
 }
 
 .header ul li {
@@ -63,6 +63,7 @@ body {
 .header ul li a {
     color: var(--text-light);
     text-decoration: none;
+    font-size: 1.0rem;
     transition: color 0.3s ease;
 }
 

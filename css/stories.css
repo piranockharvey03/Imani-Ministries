@@ -49,13 +49,13 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-    margin-top: -20px;
+    margin-top: -40px;
 }
 
 .header ul li a {
     color: var(--text-light);
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     transition: color 0.3s ease;
 }
 

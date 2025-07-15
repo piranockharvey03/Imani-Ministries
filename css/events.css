@@ -50,13 +50,13 @@ body {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-top: -50px;
+    margin-top: -40px;
 }
 
 .header ul li a {
     color: var(--text-light);
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     transition: color 0.3s ease;
 }
 
@@ -103,7 +103,7 @@ body {
 ============================ */
 .one {
     text-align: center;
-    margin-left: 12%;
+    margin-top: 2rem;
 }
 
 .one p {
