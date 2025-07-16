@@ -182,10 +182,14 @@ body {
 }
 
 .social-icons i {
-    margin-right: 10px;
     font-size: 1.5rem;
+    gap: 2rem;
 }
 
+.social-icons img {
+    width: 1.8rem;
+    margin: 0.2rem;
+}
 .footer-links span {
     margin: 0 10px;
     cursor: pointer;
